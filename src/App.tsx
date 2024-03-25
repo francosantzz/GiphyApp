@@ -1,21 +1,13 @@
-import { useState } from "react";
 import { GiftList } from "./components/GiftList/GiftList";
-import NavBar from "./components/ui/NavBar/navBar";
-
-
-interface IGift {
-  urlGift: string,
-  title: string
-}
+import { NavBar } from "./components/ui/NavBar/navBar";
 
 function App() {
-  const [gift, setGift]=useState<IGift[]>([])
   return (
     <>
-      <NavBar setGift={setGift}/>
-      <GiftList gift={gift}/>
+      <NavBar />
+      <GiftList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
